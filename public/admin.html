@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"
+          media="screen, projection">
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen, projection">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app-admin.js"></script>
+</head>
+
+<body ng-app="ContactAppAdmin">
+<div class="container" ng-controller="AdminController">
+    <div class="card">
+        <div class="headline">MESSAGES <span>INBOX</span></div>
+        <div class="loader-widget">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="data-group panel-group">
+            <div class="toolbar">
+                <div class="search-bar">
+                    <input class="" ng-model="searchText.$" title="" placeholder="Search">
+                </div>
+            </div>
+            <div class="panel panel-default" ng-repeat="m in messages | orderBy:'-time' | filter:searchText">
+                <div class="panel-heading" role="tab" id="">{{ m.name }}
+                    <div class="badge">{{ m.email }}</div>
+                </div>
+                <div class="panel-body">
+                    <div class="">{{ m.message }}</div>
+                    <div class="">{{ m.time | date : format : timezone }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

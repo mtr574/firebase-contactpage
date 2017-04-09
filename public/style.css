@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'GothamRounded-Bold';
+    src: url('fonts/GothamRounded-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamRounded-Light';
+    src: url('fonts/GothamRounded-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamRounded-Medium';
+    src: url('fonts/GothamRounded-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #565c7c;
+    font-family: 'GothamRounded-Light';
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
+    background: #3e6aff;
+    margin: 0 auto;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.card.wider {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+}
+
+.card.close {
+    height: 0;
+    min-height: 0;
+    transition: 2s;
+    overflow: hidden;
+}
+
+.card .headline {
+    margin: 0 auto;
+    font-family: 'GothamRounded-Medium';
+    text-align: center;
+    font-size: 24px;
+    color: #FFF;
+}
+
+.card .headline span {
+    font-family: 'GothamRounded-Light';
+}
+
+.card .send-button {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: #3b66f3;
+    color: #FFF;
+    letter-spacing: 1.2;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'GothamRounded-Light';
+    cursor: pointer;
+    border: 0;
+}
+
+.card .send-button:focus {
+    outline: 0;
+    border: 0;
+}
+
+.card .send-button:hover {
+}
+
+.card .send-button span {
+    font-family: 'GothamRounded-Medium';
+}
+
+.card .data-group,
+.card .input-group {
+    padding: 80px 60px 0;
+    margin: 0 auto;
+}
+
+.card .input-group label {
+    font-size: 18px;
+    color: #FFF;
+    letter-spacing: 1.2;
+    font-family: 'GothamRounded-Light';
+}
+
+.card .input-group label span {
+    font-family: 'GothamRounded-Medium';
+}
+
+.card .input-group input,
+.card .input-group textarea {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #3663f0;
+    color: #fff;
+    font-family: 'GothamRounded-Light';
+}
+
+.card .input-group textarea {
+    padding: 14px 0;
+    resize: none;
+    height: 80px;
+}
+
+/* Responsive */
+@media only screen and (min-width: 1200px) {
+    .container {
+        padding: 80px 0;
+    }
+
+    .card .input-group input {
+        margin-bottom: 25px;
+    }
+}
+
+/* END */
+
+.search-bar {
+    margin: 10px auto;
+}
+
+.search-bar input {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+}
+
+/* Loader */
+.loader-widget {
+    display: block;
+    height: 10px;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    float: left;
+    margin: 0 5px;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: fx 1000ms ease infinite 0ms;
+    animation: fx 1000ms ease infinite 0ms;
+}
+
+.dot:nth-child(2) {
+    -webkit-animation: fx 1000ms ease infinite 300ms;
+    animation: fx 1000ms ease infinite 300ms;
+}
+
+.dot:nth-child(3) {
+    -webkit-animation: fx 1000ms ease infinite 600ms;
+    animation: fx 1000ms ease infinite 600ms;
+}
+
+@-webkit-keyframes fx {
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fx {
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*END*/
