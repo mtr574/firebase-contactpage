@@ -15,7 +15,6 @@ ContactApp.controller('MessageController', function ($scope, $firebaseArray) {
     //    }
     //});
 
-
     // messages array
     $scope.messages = $firebaseArray(ref);
 

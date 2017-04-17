@@ -1,0 +1,17 @@
+{
+  "name": "firebase-contactpage",
+  "homepage": "https://github.com/mtr574/firebase-contactpage",
+  "authors": [
+    "Nate.Ben <mtr574@gmail.com>"
+  ],
+  "description": "Firebased contact form with messages panel",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
